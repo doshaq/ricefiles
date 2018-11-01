@@ -48,3 +48,33 @@
 [Modules] Fetching discord_cloudsync@0 from https://discordapp.com/api/modules/stable/discord_cloudsync/0
 [Modules] Streaming discord_cloudsync@0 [255 bytes] to /home/dosha/.config/discord/0.0.5/modules/pending/discord_cloudsync-0.zip
 [Modules] Finished module downloads. [success: 0] [failure: 1]
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discordapp.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[Modules] Starting to install discord_contact_import...
+[Modules] Fetching discord_contact_import@1 from https://discordapp.com/api/modules/stable/discord_contact_import/1
+[Modules] Streaming discord_contact_import@1 [4039155 bytes] to /home/dosha/.config/discord/0.0.5/modules/pending/discord_contact_import-1.zip
+[Modules] Finished module downloads. [success: 1] [failure: 0]
+[Modules] Installing discord_contact_import@1 from /home/dosha/.config/discord/0.0.5/modules/pending/discord_contact_import-1.zip
+[Modules] Finished module installations. [success: 1] [failure: 0]
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discordapp.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discordapp.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discordapp.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discordapp.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discordapp.com/api/modules/stable/versions.json
+[Modules] No module updates available.

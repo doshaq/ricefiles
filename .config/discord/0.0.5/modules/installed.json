@@ -19,5 +19,9 @@
   },
   "discord_voice": {
     "installedVersion": 7
+  },
+  "discord_cloudsync": {},
+  "discord_contact_import": {
+    "installedVersion": 1
   }
 }
