@@ -1,231 +1,244 @@
-;             _       _                                   __ _       
-; _ __   ___ | |_   _| |__   __ _ _ __    ___ ___  _ __  / _(_) __ _ 
-;| '_ \ / _ \| | | | | '_ \ / _` | '__|  / __/ _ \| '_ \| |_| |/ _` |
-;| |_) | (_) | | |_| | |_) | (_| | |    | (_| (_) | | | |  _| | (_| |
-;| .__/ \___/|_|\__, |_.__/ \__,_|_|     \___\___/|_| |_|_| |_|\__, |
-;|_|            |___/                                          |___/ 
+[bar/white]
 
+;------------;
+; DIMENSIONS ;
+;------------;
 
-;*********************************************************
-;
-;                          COLORS
-;
-;**********************************************************
-[colors]
-; Base colors from .Xresources
-bg          =  ${xrdb:background}
-bg-alt      =  #202020
-fg          =  ${xrdb:foreground}
-fg-alt      =  ${xrdb:color8}
-red         =  ${xrdb:color1}
-red-alt     =  ${xrdb:color9}
-green       =  ${xrdb:color2}
-green-alt   =  ${xrdb:color10}
-yellow      =  ${xrdb:color3}
-yellow-alt  =  ${xrdb:color11}
-blue        =  ${xrdb:color4}
-blue-alt    =  ${xrdb:color12}
-magenta     =  ${xrdb:color5}
-magenta-alt =  ${xrdb:color13}
-cyan        =  ${xrdb:color6}
-cyan-alt    =  ${xrdb:color14}
-white       =  ${xrdb:color7}
-white-alt   =  ${xrdb:color15}
+width = 100%
+height = 20
+offset-y = 0
+offset-x = 0
 
+border-top-size = 10
+border-bottom-size = 0
+border-right-size = 10
+border-left-size = 10
 
-;**********************************************************
-;
-;                       GLOBAL WM SETTINGS
-;
-;**********************************************************
-[global/wm]
-margin-top = 0
-margin-bottom = 0
+;----------;
+; LOCATION ;
+;----------;
 
-;*********************************************************
-;
-;                       BAR SETTINGS
-;
-;********************************************************
-[bar/top]
-monitor   = ${env:MONITOR:HDMI-1}
-bottom    = true
-width     = 1920
-height    = 16
-offset-x  = 1
-offset-y  = 1
+bottom = false
+monitor = HDMI-1
+wm-restack = none
 override-redirect = false
 
-background = ${colors.bg}
-foreground = ${colors.fg}
+;-------;
+; FONTS ;
+;-------;
 
-border-bottom-size = 5
-border-bottom-color = ${colors.bg}
-border-top-size = 5
-border-top-color = ${colors.bg}
+font-0 = Hack:size=10;3
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
 
-spacing = 0
-padding-left = 1
-padding-right = 0
-module-margin-left = 0
-module-margin-right = 0
+;--------;
+; COLORS ;
+;--------;
 
-font-0 = lucy tewi:pixelsize=8;3
-font-1 = Siji:pixelsize=11;3
-;font-1 = Material Icons:antialia=false:size=11;4
+background = 0
+foreground = #c5a9f9
+border-color = 0
 
-tray-position = right
-tray-padding = 1
-tray-transparent = true
-tray-background = #000000
+;---------------;
+; MISCELLANEOUS ;
+;---------------;
 
-modules-left = menu i3 vpn wlan
-modules-center = temperature cpu memory
-modules-right =  date battery
+fixed-center = true
+padding-left = 2 
+padding-right = 2
+module-margin = 1.5
 
-;**********************************************************
-;
-;                   MODULES SETTINGS
-;
-;**********************************************************
+modules-left = volume backlight battery mpd
+modules-center = i3
+modules-right = wlan cpu date time
+
+tray-position = none
+tray-detached = true
+
+[bar/mpd]
+;------------;
+; DIMENSIONS ;
+;------------;
+
+width = 100%
+height = 20
+offset-y = 0
+offset-x = 0
+
+border-top-size = 10
+border-bottom-size = 0
+border-right-size = 10
+border-left-size = 10
+
+;----------;
+; LOCATION ;
+;----------;
+
+bottom = true
+monitor = eDP-1
+wm-restack = none
+override-redirect = false
+
+;-------;
+; FONTS ;
+;-------;
+
+font-0 = Hack:size=10;3
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;3"
+
+;--------;
+; COLORS ;
+;--------;
+
+background = 0
+foreground = #c5a9f9
+border-color = 0
+
+;---------------;
+; MISCELLANEOUS ;
+;---------------;
+
+fixed-center = true
+padding-left = 2 
+padding-right = 2
+module-margin = 1.5
+
+;modules-left = 
+modules-center = mpd
+;modules-right = 
+
+
+;---------;
+; MODULES ;
+;---------;
 
 [module/i3]
 type = internal/i3
 
+pin-workspaces = true
 strip-wsnumbers = true
+enable-scroll = false
 
-label-focused = " [%name%] "
-label-focused-foreground = ${colors.red}
-;label-focused-background = ${colors.magenta}
-label-focused-padding = 
+label-unfocused-foreground = #afafaf
+label-focused-foreground = #c5a9f9
+label-urgent-foreground = #ff0000
 
-label-unfocused = " {%name%} "
-label-unfocused-padding = 0
-label-unfocused-foreground = #666
-;label-unfocused-background = ${colors.bg-alt}
-; icons
-ws-icon-9 = f1bc
-label-urgent = " [%name%] "
-label-urgent-foreground = ${colors.red}
-;label-urgent-background = ${colors.cyan}
-label-urgent-padding = 1
+[module/time]
+type = internal/date
 
-label-visible = " (%name%) "
-label-visible-foreground = #666
-;label-visible-background = ${colors.bg-alt}
-label-visible-padding = 0
+interval = 1.0
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.blue}
-label = "%percentage% "
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.green}
-label = "%percentage_used% "
-
-[module/wlan]
-type = internal/network
-interface = wlo1
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-
-label-connected = "%essid% "
-label-connected-foreground = ${colors.fg}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.fg-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.red}
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 100
-
-label-discharging = "%percentage%% "
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-
-label-full = " full "
-format-full-prefix = 
-format-full-prefix-foreground = ${colors.cyan}
-
-;format-charging-prefix = 
-;format-charging-prefix-foreground = ${colors.red}
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.yellow}
-
-label-charging = "Charging %percentage%% "
-label-charging-foreground = ${colors.fg}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.red}
-animation-charging-framerate = 750
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
-
-label = "%temperature-c% "
-label-warn = "%temperature-c% "
-label-warn-foreground = ${colors.red}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.cyan}
-
-[module/menu]
-type = custom/text
-
-content = ""
-content-foreground = ${colors.cyan}
-;content-background = ${colors.red}
-click-left = ~/.config/popups/todo/todo
+date = ? %H:%M
 
 [module/date]
 type = internal/date
+date = ? %e %B - %A
+label = %date%
+
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = ADP1
+poll-interval = 1
+
+full-at = 95
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-full = %percentage%%
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-charging = ? <label-charging>
+
+ramp-capacity-0 = ?
+ramp-capacity-1 = ?
+ramp-capacity-2 = ?
+ramp-capacity-3 = ?
+ramp-capacity-4 = ?
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+format-muted = ? 0%
+
+ramp-volume-0 = ?
+ramp-volume-1 = ?
+ramp-volume-2 = ?
+
+[module/mpd]
+type = internal/mpd
+
+label-offline = mpd is offline
+format-online = <icon-prev> <toggle> <icon-next> <label-song>
+format-offline = <label-offline>
+host = 127.0.0.1
+port = 6600
+icon-prev = ?
+icon-stop = ?
+icon-play = ?
+icon-pause = ?
+icon-next = ?
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+bar-progress-width = 10
+bar-progress-indicator = |
+bar-progress-fill = ?
+bar-progress-empty = ?
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = radeon_bl0
+
+format = <ramp> <label>
+
+label = %percentage%%
+
+ramp-0 = ?
+ramp-1 = ?
+ramp-2 = ?
+
+[module/wlan]
+type = internal/network
+
+interface = wlp3s0
+
 interval = 5
 
-date =
-date-alt = " %a %d %b %Y"
+label-connected = ? %essid%
+label-disconnected = ? Not Connected
 
-time = " %H:%M "
-time-alt = " %H:%M "
+[module/cpu]
+type = internal/cpu
+label = ? %percentage%%
 
-label = %date%%time%
 
-format-prefix = 
-;format-foreground = ${colors.magenta}
-format-prefix-foreground = ${colors.magenta}
+[module/memory]
+type = internal/memory
+label = ? %gb_used%
 
-[module/vpn]
-type = custom/script
-interval = 1200
-format = "<label> "
-format-prefix = " "
-format-prefix-foreground = ${colors.magenta}
-exec = ~/.config/polybar/vpn
+[module/network]
+type = internal/network
+interface = wlp3s0
+label-connected = ? %downspeed% | ? %upspeed%
 
-; vim:ft=dosini
+[bar/float]
+
+inherit = bar/white
+
+background = #ffffff
+
+tray-position = center
+
+

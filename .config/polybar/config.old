@@ -1,262 +1,231 @@
-; PolyBar Custom
-; ver. 3.0.5-2B
+;             _       _                                   __ _       
+; _ __   ___ | |_   _| |__   __ _ _ __    ___ ___  _ __  / _(_) __ _ 
+;| '_ \ / _ \| | | | | '_ \ / _` | '__|  / __/ _ \| '_ \| |_| |/ _` |
+;| |_) | (_) | | |_| | |_) | (_| | |    | (_| (_) | | | |  _| | (_| |
+;| .__/ \___/|_|\__, |_.__/ \__,_|_|     \___\___/|_| |_|_| |_|\__, |
+;|_|            |___/                                          |___/ 
 
-; Colors
 
+;*********************************************************
+;
+;                          COLORS
+;
+;**********************************************************
 [colors]
-background = #0b0d09
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #51595a
-primary = #ffb52a
-secondary = #e60053
-power = #ffa39c
-promo = #79b0e7
-alert = #bd2c40
-reb = #77e695
-reb-alt = #233227
+; Base colors from .Xresources
+bg          =  ${xrdb:background}
+bg-alt      =  #202020
+fg          =  ${xrdb:foreground}
+fg-alt      =  ${xrdb:color8}
+red         =  ${xrdb:color1}
+red-alt     =  ${xrdb:color9}
+green       =  ${xrdb:color2}
+green-alt   =  ${xrdb:color10}
+yellow      =  ${xrdb:color3}
+yellow-alt  =  ${xrdb:color11}
+blue        =  ${xrdb:color4}
+blue-alt    =  ${xrdb:color12}
+magenta     =  ${xrdb:color5}
+magenta-alt =  ${xrdb:color13}
+cyan        =  ${xrdb:color6}
+cyan-alt    =  ${xrdb:color14}
+white       =  ${xrdb:color7}
+white-alt   =  ${xrdb:color15}
 
-; Bar
-; You can Change the name of your bar in your config file script launch by polybar top &
-; editing the modules that says [bar/top and bottom]
 
+;**********************************************************
+;
+;                       GLOBAL WM SETTINGS
+;
+;**********************************************************
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+;*********************************************************
+;
+;                       BAR SETTINGS
+;
+;********************************************************
 [bar/top]
-monitor = ${env:MONITOR:HDMI-1}
-width = 100%
-height = 28
-radius = 0.0
-bottom = false
-fixed-center = false
-background = ${colors.background}
-foreground = ${colors.foreground}
-line-size = 2
-line-color = #f00
-padding-left = 0
-padding-right = 2
-module-margin-left = 2
-module-margin-right = 2
+monitor   = ${env:MONITOR:HDMI-1}
+bottom    = true
+width     = 1920
+height    = 16
+offset-x  = 1
+offset-y  = 1
+override-redirect = false
 
-; Fonts
+background = ${colors.bg}
+foreground = ${colors.fg}
 
-font-0 = mplus Nerd Font:pixelsize=9;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+border-bottom-size = 5
+border-bottom-color = ${colors.bg}
+border-top-size = 5
+border-top-color = ${colors.bg}
 
-; Active modules
-; powermenu text xwindow
+spacing = 0
+padding-left = 1
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
 
-modules-left = i3
-modules-center = 
-modules-right = xwindow
-tray-position = left
-tray-padding = 2
+font-0 = lucy tewi:pixelsize=8;3
+font-1 = Siji:pixelsize=11;3
+;font-1 = Material Icons:antialia=false:size=11;4
 
-[bar/bottom]
-monitor = ${env:MONITOR:HDMI-1}
-width = 100%
-height = 28
-radius = 0.0
-bottom =true
-fixed-center = false
-background = ${colors.background}
-foreground = ${colors.foreground}
-line-size = 2
-line-color = #f00
-padding-left = 2
-padding-right = 2
-module-margin-left = 1
-module-margin-right = 2
-
-; Fonts
-
-font-0 = mplus Nerd Font:pixelsize=9;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-
-; Active modules
-; memory, bluetooth, xkeyboard, battery, date and mail
-
-modules-left = memory
-modules-center =
-modules-right = volume date
 tray-position = right
-tray-padding = 2
+tray-padding = 1
+tray-transparent = true
+tray-background = #000000
 
-; Modules
+modules-left = menu i3 vpn wlan
+modules-center = temperature cpu memory
+modules-right =  date battery
 
-[module/xwindow]
-type = internal/xwindow
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-label = "%title:0:30:...%"
-label-underline = ${colors.foreground-alt}
-format-prefix-underline = ${colors.foreground-alt}
-
-;[module/xkeyboard]
-;type = internal/xkeyboard
-;blacklist-0 = num lock
-;format-prefix = " "
-;format-prefix-foreground = ${colors.foreground-alt}
-;format-prefix-underline = ${colors.secondary}
-;label-layout = %layout%
-;label-layout-underline = ${colors.secondary}
-;label-indicator-padding = 2
-;label-indicator-margin = 1
-;label-indicator-background = ${colors.secondary}
-;label-indicator-underline = ${colors.secondary}
-
-[module/bspwm]
-type = internal/bspwm
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-label-occupied = %index%
-label-occupied-padding = 2
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+;**********************************************************
+;
+;                   MODULES SETTINGS
+;
+;**********************************************************
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
 
-label-mode-padding = 1
-label-mode-foreground = ${colors.foreground}
-label-mode-background = ${colors.background}
+strip-wsnumbers = true
 
-label-focused = %name% 
-label-focused-background = ${colors.reb-alt}
-label-focused-foreground = ${colors.foreground}
-label-focused-underline = ${colors.reb}
-label-focused-padding = 1
+label-focused = " [%name%] "
+label-focused-foreground = ${colors.red}
+;label-focused-background = ${colors.magenta}
+label-focused-padding = 
 
-label-unfocused = %name%
-label-unfocused-padding = 1
-
-label-visible = %name%
-label-visible-background = ${colors.background}
-label-visible-underline = ${colors.background}
-label-visible-padding = 1
-
-label-urgent = %name%
-label-urgent-background = ${colors.background}
-label-urgent-foreground = ${colors.foreground}
+label-unfocused = " {%name%} "
+label-unfocused-padding = 0
+label-unfocused-foreground = #666
+;label-unfocused-background = ${colors.bg-alt}
+; icons
+ws-icon-9 = f1bc
+label-urgent = " [%name%] "
+label-urgent-foreground = ${colors.red}
+;label-urgent-background = ${colors.cyan}
 label-urgent-padding = 1
 
-[module/text]
-type = custom/text
-content = "Arch Linux"
-content-foreground = ${colors.foreground-alt}
+label-visible = " (%name%) "
+label-visible-foreground = #666
+;label-visible-background = ${colors.bg-alt}
+label-visible-padding = 0
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.blue}
+label = "%percentage% "
 
 [module/memory]
 type = internal/memory
-interval = 0.2
-format = <label> <bar-used>
-label = RAM
-label-font = 5
-label-foreground = ${colors.foreground-alt}
-bar-used-width = 16
-bar-used-gradient = true
-bar-used-foreground-0 = #046e6a
-bar-used-foreground-1 = #048976
-bar-used-foreground-2 = #04a57b
-bar-used-foreground-3 = #04a78a
-bar-used-indicator = ∎
-bar-used-indicator-font = 25
-bar-used-indicator-foreground = #fff
-bar-used-fill = ∎
-bar-used-fill-font = 5
-bar-used-empty = ∎
-bar-used-empty-font = 5
-bar-used-empty-foreground = #44
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.green}
+label = "%percentage_used% "
 
-;[module/bluetooth]
-;type = custom/script
-;interval = 5
-;exec = ~/.config/polybar/bluetooth
+[module/wlan]
+type = internal/network
+interface = wlo1
+interval = 3.0
 
+format-connected = <ramp-signal> <label-connected>
 
-[module/date]
-type = internal/date
-interval = 5
-date =
-date-alt = " %a %d %b"
-time = "%H:%M%p "
-format-prefix = //
-;format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
-label = %date% %time%
+label-connected = "%essid% "
+label-connected-foreground = ${colors.fg}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.fg-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.red}
 
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = AC
-full-at = 98
+adapter = ADP1
+full-at = 100
+
+label-discharging = "%percentage%% "
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+
+label-full = " full "
+format-full-prefix = 
+format-full-prefix-foreground = ${colors.cyan}
+
+;format-charging-prefix = 
+;format-charging-prefix-foreground = ${colors.red}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.yellow}
+
+label-charging = "Charging %percentage%% "
+label-charging-foreground = ${colors.fg}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.red}
 animation-charging-framerate = 750
 
-[module/powermenu]
-type = custom/menu
-format-spacing = 1
-label-open = >>>
-label-open-foreground = ${colors.secondary}
-label-close = >>> Cancel
-label-close-foreground = ${colors.promo}
-label-separator = *
-label-separator-foreground = ${colors.foreground-alt}
-menu-0-0 = Reloading
-menu-0-0-exec = menu-open-1
-menu-0-0-underline = ${colors.reb}
-menu-0-1 = Shutdown
-menu-0-1-exec = menu-open-2
-menu-0-1-underline = ${colors.power}
-menu-1-0 = Closing all applications, shutting down the computer
-menu-1-0-exec = sudo reboot
-menu-1-1 = Cancel 
-menu-1-1-exec = menu-open-0
-menu-2-0 = Close all applications and shutdown your computer
-menu-2-0-exec = sudo poweroff
-menu-2-1 = Cancel
-menu-2-1-exec = menu-open-0
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
 
-[module/volume]
-type = internal/volume
-;speaker-mixer = Speaker
-;headphone-mixer = Headphone
-;headphone-id = 9
-format-volume = <label-volume>
-;format-volume-prefix = " "
-format-volume-prefix = " "
-;format-volume-suffix = " "
-label-muted = muted
-label-muted-foreground = ${colors.foreground}
-format-volume-prefix-foreground = ${colors.foreground-alt}
-format-volume-underline = #ffb52a
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
 
-[settings]
-screenchange-reload = true
+label = "%temperature-c% "
+label-warn = "%temperature-c% "
+label-warn-foreground = ${colors.red}
 
-[global/wm]
-margin-top = 2
-margin-bottom = 2
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.cyan}
+
+[module/menu]
+type = custom/text
+
+content = ""
+content-foreground = ${colors.cyan}
+;content-background = ${colors.red}
+click-left = ~/.config/popups/todo/todo
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %a %d %b %Y"
+
+time = " %H:%M "
+time-alt = " %H:%M "
+
+label = %date%%time%
+
+format-prefix = 
+;format-foreground = ${colors.magenta}
+format-prefix-foreground = ${colors.magenta}
+
+[module/vpn]
+type = custom/script
+interval = 1200
+format = "<label> "
+format-prefix = " "
+format-prefix-foreground = ${colors.magenta}
+exec = ~/.config/polybar/vpn
+
+; vim:ft=dosini
