@@ -1,243 +1,262 @@
-[bar/white]
+; PolyBar Custom
+; ver. 3.0.5-2B
 
-;------------;
-; DIMENSIONS ;
-;------------;
+; Colors
 
+[colors]
+background = #0b0d09
+background-alt = #444
+foreground = #dfdfdf
+foreground-alt = #51595a
+primary = #ffb52a
+secondary = #e60053
+power = #ffa39c
+promo = #79b0e7
+alert = #bd2c40
+reb = #77e695
+reb-alt = #233227
+
+; Bar
+; You can Change the name of your bar in your config file script launch by polybar top &
+; editing the modules that says [bar/top and bottom]
+
+[bar/top]
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 20
-offset-y = 0
-offset-x = 0
-
-border-top-size = 10
-border-bottom-size = 0
-border-right-size = 10
-border-left-size = 10
-
-;----------;
-; LOCATION ;
-;----------;
-
+height = 28
+radius = 0.0
 bottom = false
-monitor = eDP-1
-wm-restack = none
-override-redirect = false
-
-;-------;
-; FONTS ;
-;-------;
-
-font-0 = Hack:size=10;3
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
-
-;--------;
-; COLORS ;
-;--------;
-
-background = 0
-foreground = #c5a9f9
-border-color = 0
-
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
-
-fixed-center = true
-padding-left = 2 
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 2
+line-color = #f00
+padding-left = 0
 padding-right = 2
-module-margin = 1.5
+module-margin-left = 2
+module-margin-right = 2
 
-modules-left = volume backlight battery mpd
-modules-center = i3
-modules-right = wlan cpu date time
+; Fonts
 
-tray-position = none
-tray-detached = true
+font-0 = mplus Nerd Font:pixelsize=9;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
 
-[bar/mpd]
-;------------;
-; DIMENSIONS ;
-;------------;
+; Active modules
+; powermenu text xwindow
 
+modules-left = i3
+modules-center = 
+modules-right = xwindow
+tray-position = left
+tray-padding = 2
+
+[bar/bottom]
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 20
-offset-y = 0
-offset-x = 0
-
-border-top-size = 10
-border-bottom-size = 0
-border-right-size = 10
-border-left-size = 10
-
-;----------;
-; LOCATION ;
-;----------;
-
-bottom = true
-monitor = eDP-1
-wm-restack = none
-override-redirect = false
-
-;-------;
-; FONTS ;
-;-------;
-
-font-0 = Hack:size=10;3
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;3"
-
-;--------;
-; COLORS ;
-;--------;
-
-background = 0
-foreground = #c5a9f9
-border-color = 0
-
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
-
-fixed-center = true
-padding-left = 2 
+height = 28
+radius = 0.0
+bottom =true
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 2
+line-color = #f00
+padding-left = 2
 padding-right = 2
-module-margin = 1.5
+module-margin-left = 1
+module-margin-right = 2
 
-;modules-left = 
-modules-center = mpd
-;modules-right = 
+; Fonts
 
+font-0 = mplus Nerd Font:pixelsize=9;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
 
-;---------;
-; MODULES ;
-;---------;
+; Active modules
+; memory, bluetooth, xkeyboard, battery, date and mail
+
+modules-left = memory
+modules-center =
+modules-right = volume date
+tray-position = right
+tray-padding = 2
+
+; Modules
+
+[module/xwindow]
+type = internal/xwindow
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+label = "%title:0:30:...%"
+label-underline = ${colors.foreground-alt}
+format-prefix-underline = ${colors.foreground-alt}
+
+;[module/xkeyboard]
+;type = internal/xkeyboard
+;blacklist-0 = num lock
+;format-prefix = " "
+;format-prefix-foreground = ${colors.foreground-alt}
+;format-prefix-underline = ${colors.secondary}
+;label-layout = %layout%
+;label-layout-underline = ${colors.secondary}
+;label-indicator-padding = 2
+;label-indicator-margin = 1
+;label-indicator-background = ${colors.secondary}
+;label-indicator-underline = ${colors.secondary}
+
+[module/bspwm]
+type = internal/bspwm
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+label-occupied = %index%
+label-occupied-padding = 2
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
 
-pin-workspaces = true
-strip-wsnumbers = true
-enable-scroll = false
+label-mode-padding = 1
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background}
 
-label-unfocused-foreground = #afafaf
-label-focused-foreground = #c5a9f9
-label-urgent-foreground = #ff0000
+label-focused = %name% 
+label-focused-background = ${colors.reb-alt}
+label-focused-foreground = ${colors.foreground}
+label-focused-underline = ${colors.reb}
+label-focused-padding = 1
 
-[module/time]
-type = internal/date
+label-unfocused = %name%
+label-unfocused-padding = 1
 
-interval = 1.0
+label-visible = %name%
+label-visible-background = ${colors.background}
+label-visible-underline = ${colors.background}
+label-visible-padding = 1
 
-date =  %H:%M
+label-urgent = %name%
+label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.foreground}
+label-urgent-padding = 1
 
-[module/date]
-type = internal/date
-date =  %e %B - %A
-label = %date%
-
-
-[module/battery]
-type = internal/battery
-
-battery = BAT0
-adapter = ADP1
-poll-interval = 1
-
-full-at = 95
-
-label-discharging = %percentage%%
-label-charging = %percentage%%
-label-full = %percentage%%
-
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <ramp-capacity> <label-full>
-format-charging =  <label-charging>
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-[module/volume]
-type = internal/volume
-
-format-volume = <ramp-volume> <label-volume>
-format-muted =  0%
-
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-
-[module/mpd]
-type = internal/mpd
-
-label-offline = mpd is offline
-format-online = <icon-prev> <toggle> <icon-next> <label-song>
-format-offline = <label-offline>
-host = 127.0.0.1
-port = 6600
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-bar-progress-width = 10
-bar-progress-indicator = |
-bar-progress-fill = ─
-bar-progress-empty = ─
-
-[module/backlight]
-type = internal/backlight
-
-; Use the following command to list available cards:
-; $ ls -1 /sys/class/backlight/
-card = radeon_bl0
-
-format = <ramp> <label>
-
-label = %percentage%%
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-
-[module/wlan]
-type = internal/network
-
-interface = wlp3s0
-
-interval = 5
-
-label-connected =  %essid%
-label-disconnected =  Not Connected
-
-[module/cpu]
-type = internal/cpu
-label =  %percentage%%
-
+[module/text]
+type = custom/text
+content = "Arch Linux"
+content-foreground = ${colors.foreground-alt}
 
 [module/memory]
 type = internal/memory
-label =  %gb_used%
+interval = 0.2
+format = <label> <bar-used>
+label = RAM
+label-font = 5
+label-foreground = ${colors.foreground-alt}
+bar-used-width = 16
+bar-used-gradient = true
+bar-used-foreground-0 = #046e6a
+bar-used-foreground-1 = #048976
+bar-used-foreground-2 = #04a57b
+bar-used-foreground-3 = #04a78a
+bar-used-indicator = ∎
+bar-used-indicator-font = 25
+bar-used-indicator-foreground = #fff
+bar-used-fill = ∎
+bar-used-fill-font = 5
+bar-used-empty = ∎
+bar-used-empty-font = 5
+bar-used-empty-foreground = #44
 
-[module/network]
-type = internal/network
-interface = wlp3s0
-label-connected =  %downspeed% |  %upspeed%
+;[module/bluetooth]
+;type = custom/script
+;interval = 5
+;exec = ~/.config/polybar/bluetooth
 
-[bar/float]
 
-inherit = bar/white
+[module/date]
+type = internal/date
+interval = 5
+date =
+date-alt = " %a %d %b"
+time = "%H:%M%p "
+format-prefix = //
+;format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+label = %date% %time%
 
-background = #ffffff
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
 
-tray-position = center
+[module/powermenu]
+type = custom/menu
+format-spacing = 1
+label-open = >>>
+label-open-foreground = ${colors.secondary}
+label-close = >>> Cancel
+label-close-foreground = ${colors.promo}
+label-separator = *
+label-separator-foreground = ${colors.foreground-alt}
+menu-0-0 = Reloading
+menu-0-0-exec = menu-open-1
+menu-0-0-underline = ${colors.reb}
+menu-0-1 = Shutdown
+menu-0-1-exec = menu-open-2
+menu-0-1-underline = ${colors.power}
+menu-1-0 = Closing all applications, shutting down the computer
+menu-1-0-exec = sudo reboot
+menu-1-1 = Cancel 
+menu-1-1-exec = menu-open-0
+menu-2-0 = Close all applications and shutdown your computer
+menu-2-0-exec = sudo poweroff
+menu-2-1 = Cancel
+menu-2-1-exec = menu-open-0
 
+[module/volume]
+type = internal/volume
+;speaker-mixer = Speaker
+;headphone-mixer = Headphone
+;headphone-id = 9
+format-volume = <label-volume>
+;format-volume-prefix = " "
+format-volume-prefix = " "
+;format-volume-suffix = " "
+label-muted = muted
+label-muted-foreground = ${colors.foreground}
+format-volume-prefix-foreground = ${colors.foreground-alt}
+format-volume-underline = #ffb52a
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 2
+margin-bottom = 2

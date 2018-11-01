@@ -128,7 +128,7 @@ bindsym $mod+r mode "resize"
 #----------------#
 
 # rofi
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -theme ~/.config/rofi/leve-froly.rasi -show run
 
 # urxvt
 bindsym $mod+Return exec --no-startup-id urxvt
@@ -177,16 +177,18 @@ client.background 		#
 # STARTUP APPLICATIONS #
 #----------------------#
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wallpaper.jpg
+
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/*
 
 #exec --no-startup-id dropbox
-exec --no-startup-id compton -cb --config ~/.config/compton/compton.conf
+exec_always --no-startup-id compton -cb --config ~/.config/compton/compton.conf
 #exec --no-startup-id sudo powertop --auto-tune
 exec --no-startup-id nm-applet
 #exec --no-startup-id udiskie
-exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id xrdb ~/.config/Xresources
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-#---------------#
+#---------------
 # SPECIAL CASES #
 #---------------#
 
