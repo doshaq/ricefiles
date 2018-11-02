@@ -4,6 +4,6 @@ autologin.blob="fPCl33NT8Zme/AWjdn6V96Xu+H/CkNFOKzFHzvWVR8SR8zmlQ7g6UDJkVCY9AlyG
 autologin.username="azdy68@gmail.com"
 app.autostart-mode=""
 storage.last-location="/home/dosha/.cache/spotify/Storage"
-core.clock_delta=1
+core.clock_delta=2
 app.last-launched-version="1.0.92.390.g2ce5ec7d"
 app.autostart-configured=true

@@ -1,84 +1,93 @@
-urxvt.scrollBar: false
-!urxvt.transparent: true
-!urxvt.shading: 20
+!--------------!
+! URXVT CONFIG !
+!--------------!
 
-!urxvt.tintColor: #172A47
-!urxvt.inheritPixmap: true
-urxvt.depth: 32
+URxvt.internalBorder:	30
+URxvt.scrollBar:	false
+URxvt.letterSpace:	-1
+URxvt.cursorColor:	#191919
+!URxvt.font: xft:FantasqueSansMono, ft:Font Awesome 5 Free Solid:size=10
+URxvt.font: xft:Hack:size=9,xft:Font Awesome:pixelsize=27:minspace=False,xft:PowerlineSymbols:pixelsize=27:minispace=False
+!! Larger history limit
 
-urxvt.keysym.Control-Shift-V: perl:clipboard:paste
-urxvt.keysym.Control-Shift-C: perl:clipboard:copy
+urxvt.saveLines: 1000000
 
-urxvt.iso14755: False
+!! Perl extensions
+urxvt.perl-ext-common: default,matcher,font-size,clipboard
+!! Open urls in browser with Control-Click
+urxvt.urlLauncher: /usr/bin/firefox
+urxvt.matcher.button: C1
+!! Change font size on Control-Plus/Minus
+URxvt.keysym.Control-0x2b: perl:font-size:increase
+URxvt.keysym.Control-0x2d: perl:font-size:decrease
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.m-c: perl:clipboard:copy
+URxvt.keysym.m-v: perl:clipboard:paste
 
-urxvt.perl-ext-common: default,clipboard
+!-------------!
+! ROFI CONFIG !
+!-------------!
 
-!Fonts
+! state			background	border		separator
+rofi.color-window:	#ffffff,	#191919,	#191919	
 
-urxvt.font: xft:Ubuntu Mono:pixelsize=17,style=regular
-urxvt.boldFont: xft:Ubuntu Mono:pixelsize=17,style=bold
-urxvt.letterSpace: -1
+! state			bg		fg		abg		hbg		hfg
+rofi.color-normal:	#ffffff,	#191919,	#ffffff,	#191919,	#ffffff
 
+! general
+rofi.width: 33
+rofi.padding: 30
+rofi.hide-scrollbar: true
+rofi.borderwidth: 0
+rofi.columns: 1
+rofi.lines: 5
+rofi.separator-style: solid
+rofi.font: Hack 10
 
-Xft.dpi: 96	
-Xft.antialias: true
-!Xft.rbga: none
-Xft.hintstyle: hintfull
-Xft.hinting: true
+rofi.color-enabled: true
+!rofi.color-window: #f2a2f0, #f2a2f0, #f2a2f0
+!rofi.color-normal: #f2a2f0, #f2a2f0, #f2a2f0
 
-*.internalBorder: 13
-
-
+! ------------------------------------------------------------------------------
+! theme colors
+! ------------------------------------------------------------------------------
 ! special
-!urxvt.foreground:   #placeholder
-!doesnt work because urxvt.transparent and tintcolor
-
 ! special
-!*.foreground:   #70ef6e
-!*.foreground: #99ddff
-*.foreground: #8aeff4
+*.foreground:   #d3d0c8
+*.background:   #2d2d2d
+*.cursorColor:  #d3d0c8
 
-!HOLY SHIT IT WORKS
-!*.background:   [75]#172a47
-*.background: [75]#0b2545
-*.cursorColor:  #8aeff4
+! black
+*.color0:       #2d2d2d
+*.color8:       #747369
 
+! red
+*.color1:       #f2777a
+*.color9:       #f2777a
 
+! green
+*.color2:       #99cc99
+*.color10:      #99cc99
 
+! yellow
+*.color3:       #ffcc66
+*.color11:      #ffcc66
 
-! 1
-*.color0:       #5959af
-*.color8:       #333399
+! blue
+*.color4:       #6699cc
+*.color12:      #6699cc
 
-! 2
-*.color1:       #7575c6
-*.color9:       #6666cc
-
-! 3 - Green 
-*.color2: 		#82ff80
-!	Name modifier
-*.color10:      #82ff80
-
-! 4 -
-*.color3:       #6be5cb
-
-*.color11:      #6be5cb
-
-
-! 5 -
-*.color4:       #72afff
-!FOLDERS
-*.color12:      #72afff
-
-
-! 6 - 
-*.color5:       #7cdcff
-*.color13:      #7cdcff
+! magenta
+*.color5:       #cc99cc
+*.color13:      #cc99cc
 
 ! cyan
-*.color6:       #c7ff96
-*.color14:      #c7ff96
+*.color6:       #66cccc
+*.color14:      #66cccc
 
-! white (directory thing in username header)
-*.color7:       #cdffcc
-*.color15: #cdffcc
+! white
+*.color7:       #d3d0c8
+*.color15:      #f2f0ec
+
+

@@ -34,7 +34,7 @@ URxvt.saveLines:         10000
 URxvt*geometry:          96x30
 !URxvt*terminalName:      rxvt-unicode-256color
 URxvt*visualBell:        false
-
+URxvt.font: xft:Hack:size=10, xft:Font Awesome 5 Free Solid:size=10
 !! Scrollbar
 URxvt.scrollBar:          false
 URxvt.scrollBar_right:    false
@@ -93,5 +93,5 @@ URxvt.iso14755_52:         false
 Xcursor.theme:             Adwait
 
 !! Color theme
-#include "/home/dosha/.colors/sham"
+#include "/home/dosha/.colors/gotham"
 
