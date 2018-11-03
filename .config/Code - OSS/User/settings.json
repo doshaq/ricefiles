@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "afterDelay",
+    "window.titleBarStyle": "custom",
+    "workbench.iconTheme": "vscode-icons",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.rendererType": "dom"
+}

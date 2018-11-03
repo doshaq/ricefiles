@@ -1,0 +1,60 @@
+[Info  - 9:13:23 PM] Using tsserver from: /usr/lib/code/extensions/node_modules/typescript/lib
+[Info  - 9:13:23 PM] Forking TSServer
+PATH: /usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/isaac/bin 
+[Info  - 9:13:23 PM] Started TSServer
+[Error  - 12:20:54 AM] 'quickinfo' request failed with error.
+Error processing request. Debug Failure. False expression: `JsxText` tokens should not be the first child of `JsxElement | JsxSelfClosingElement`
+Error: Debug Failure. False expression: `JsxText` tokens should not be the first child of `JsxElement | JsxSelfClosingElement`
+    at findRightmostChildNodeWithTokens (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88974:26)
+    at find (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88950:33)
+    at findPrecedingToken (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88913:22)
+    at getTokenAtPositionWorker (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88863:41)
+    at getTouchingToken (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88837:16)
+    at Object.getTouchingPropertyName (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88829:16)
+    at Object.getQuickInfoAtPosition (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:111478:27)
+    at IOSession.Session.getQuickInfoWorker (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:118953:62)
+    at Session.handlers.ts.createMapFromTemplate._a.(anonymous function) (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:118076:61)
+    at /usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:119531:88
+    at IOSession.Session.executeWithRequestId (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:119522:28)
+    at IOSession.Session.executeCommand (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:119531:33)
+    at IOSession.Session.onMessage (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:119551:35)
+    at Interface.<anonymous> (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:120805:27)
+    at emitOne (events.js:116:13)
+    at Interface.emit (events.js:211:7)
+    at Interface._onLine (readline.js:282:10)
+    at Interface._normalWrite (readline.js:424:12)
+    at Socket.ondata (readline.js:141:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at Pipe.onread (net.js:594:20)
+[Error  - 12:20:56 AM] 'quickinfo' request failed with error.
+Error processing request. Debug Failure. False expression: `JsxText` tokens should not be the first child of `JsxElement | JsxSelfClosingElement`
+Error: Debug Failure. False expression: `JsxText` tokens should not be the first child of `JsxElement | JsxSelfClosingElement`
+    at findRightmostChildNodeWithTokens (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88974:26)
+    at find (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88950:33)
+    at findPrecedingToken (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88913:22)
+    at getTokenAtPositionWorker (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88863:41)
+    at getTouchingToken (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88837:16)
+    at Object.getTouchingPropertyName (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:88829:16)
+    at Object.getQuickInfoAtPosition (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:111478:27)
+    at IOSession.Session.getQuickInfoWorker (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:118953:62)
+    at Session.handlers.ts.createMapFromTemplate._a.(anonymous function) (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:118076:61)
+    at /usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:119531:88
+    at IOSession.Session.executeWithRequestId (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:119522:28)
+    at IOSession.Session.executeCommand (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:119531:33)
+    at IOSession.Session.onMessage (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:119551:35)
+    at Interface.<anonymous> (/usr/lib/code/extensions/node_modules/typescript/lib/tsserver.js:120805:27)
+    at emitOne (events.js:116:13)
+    at Interface.emit (events.js:211:7)
+    at Interface._onLine (readline.js:282:10)
+    at Interface._normalWrite (readline.js:424:12)
+    at Socket.ondata (readline.js:141:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at Pipe.onread (net.js:594:20)

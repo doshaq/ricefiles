@@ -1,0 +1,16 @@
+[2018-11-03 13:46:26.153] [exthost4] [info] extension host started
+[2018-11-03 13:46:26.165] [exthost4] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:26.165] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/debug-auto-launch/out/extension
+[2018-11-03 13:46:26.171] [exthost4] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:26.171] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/emmet/dist/extension
+[2018-11-03 13:46:26.200] [exthost4] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:26.200] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/git/dist/main
+[2018-11-03 13:46:26.338] [exthost4] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:26.338] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/merge-conflict/out/extension
+[2018-11-03 13:46:26.349] [exthost4] [info] ExtensionService#_doActivateExtension vscode.search-rg {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:26.349] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/search-rg/out/extension
+[2018-11-03 13:46:26.355] [exthost4] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:26.355] [exthost4] [info] ExtensionService#loadCommonJSModule /home/dosha/.vscode-oss/extensions/robertohuertasm.vscode-icons-7.28.0/out/src/
+[2018-11-03 13:46:26.492] [exthost4] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:26.492] [exthost4] [info] ExtensionService#loadCommonJSModule /home/dosha/.vscode-oss/extensions/vscodevim.vim-0.16.12/out/extension
+[2018-11-03 13:46:27.004] [exthost4] [info] eager extensions activated

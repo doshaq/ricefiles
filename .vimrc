@@ -50,7 +50,9 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'lilydjwg/colorizer'
 Plugin 'morhetz/gruvbox'
-
+"Plugin javascript
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 call vundle#end()       
 filetype plugin indent on  
 
@@ -312,6 +314,9 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_python_binary_path = '/usr/bin/python2.7'
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+""JAVASCRPIT MODE
+let g:jsx_ext_required=0 "Allow JSX in normal JS files"
+let g:syntastic_javascript_checkers = ['eslint']
 "" Ultisnips.vim
 let g:UltiSnipsExpandTrigger       = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"

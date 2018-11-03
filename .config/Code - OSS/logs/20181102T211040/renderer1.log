@@ -1,0 +1,11 @@
+[2018-11-02 21:10:42.031] [renderer1] [info] no standard startup: not just one text editor
+[2018-11-02 21:11:42.383] [renderer1] [info] no standard startup: not a new window
+[2018-11-02 21:11:59.262] [renderer1] [info] no standard startup: not a new window
+[2018-11-02 21:12:32.932] [renderer1] [info] no standard startup: not a new window
+[2018-11-02 21:13:22.887] [renderer1] [info] no standard startup: not a new window
+[2018-11-03 00:43:51.716] [renderer1] [info] no standard startup: not a new window
+[2018-11-03 00:44:54.644] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-11-03 00:46:58.676] [renderer1] [error] ENOENT: no such file or directory, scandir '/mount/hdd/projects/react-native/sports/src/components/or': Error: ENOENT: no such file or directory, scandir '/mount/hdd/projects/react-native/sports/src/components/or'
+[2018-11-03 00:46:58.767] [renderer1] [error] ENOENT: no such file or directory, scandir '/mount/hdd/projects/react-native/sports/src/components/ori': Error: ENOENT: no such file or directory, scandir '/mount/hdd/projects/react-native/sports/src/components/ori'
+[2018-11-03 00:46:58.916] [renderer1] [error] ENOENT: no such file or directory, scandir '/mount/hdd/projects/react-native/sports/src/components/orif': Error: ENOENT: no such file or directory, scandir '/mount/hdd/projects/react-native/sports/src/components/orif'
+[2018-11-03 00:46:59.742] [renderer1] [error] ENOENT: no such file or directory, scandir '/mount/hdd/projects/react-native/sports/src/components/p': Error: ENOENT: no such file or directory, scandir '/mount/hdd/projects/react-native/sports/src/components/p'

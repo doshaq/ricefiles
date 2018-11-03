@@ -1,0 +1,48 @@
+[2018-11-03 13:46:37.243] [exthost4] [info] extension host started
+[2018-11-03 13:46:37.264] [exthost4] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:37.264] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/debug-auto-launch/out/extension
+[2018-11-03 13:46:37.269] [exthost4] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:37.269] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/emmet/dist/extension
+[2018-11-03 13:46:37.307] [exthost4] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:37.307] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/git/dist/main
+[2018-11-03 13:46:37.421] [exthost4] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:37.421] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/merge-conflict/out/extension
+[2018-11-03 13:46:37.429] [exthost4] [info] ExtensionService#_doActivateExtension vscode.search-rg {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:37.429] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/search-rg/out/extension
+[2018-11-03 13:46:37.432] [exthost4] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:37.432] [exthost4] [info] ExtensionService#loadCommonJSModule /home/dosha/.vscode-oss/extensions/robertohuertasm.vscode-icons-7.28.0/out/src/
+[2018-11-03 13:46:37.488] [exthost4] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:46:37.488] [exthost4] [info] ExtensionService#loadCommonJSModule /home/dosha/.vscode-oss/extensions/vscodevim.vim-0.16.12/out/extension
+[2018-11-03 13:46:37.736] [exthost4] [info] eager extensions activated
+[2018-11-03 13:52:14.343] [exthost4] [info] extension host started
+[2018-11-03 13:52:14.359] [exthost4] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:52:14.359] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/debug-auto-launch/out/extension
+[2018-11-03 13:52:14.364] [exthost4] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:52:14.364] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/emmet/dist/extension
+[2018-11-03 13:52:14.399] [exthost4] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:52:14.399] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/git/dist/main
+[2018-11-03 13:52:14.511] [exthost4] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:52:14.511] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/merge-conflict/out/extension
+[2018-11-03 13:52:14.519] [exthost4] [info] ExtensionService#_doActivateExtension vscode.search-rg {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:52:14.519] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/search-rg/out/extension
+[2018-11-03 13:52:14.523] [exthost4] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:52:14.523] [exthost4] [info] ExtensionService#loadCommonJSModule /home/dosha/.vscode-oss/extensions/robertohuertasm.vscode-icons-7.28.0/out/src/
+[2018-11-03 13:52:14.580] [exthost4] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2018-11-03 13:52:14.580] [exthost4] [info] ExtensionService#loadCommonJSModule /home/dosha/.vscode-oss/extensions/vscodevim.vim-0.16.12/out/extension
+[2018-11-03 13:52:14.842] [exthost4] [info] eager extensions activated
+[2018-11-03 14:00:09.321] [exthost4] [info] extension host started
+[2018-11-03 14:00:09.336] [exthost4] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2018-11-03 14:00:09.336] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/debug-auto-launch/out/extension
+[2018-11-03 14:00:09.340] [exthost4] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-11-03 14:00:09.340] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/emmet/dist/extension
+[2018-11-03 14:00:09.369] [exthost4] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-11-03 14:00:09.369] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/git/dist/main
+[2018-11-03 14:00:09.481] [exthost4] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-11-03 14:00:09.481] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/merge-conflict/out/extension
+[2018-11-03 14:00:09.489] [exthost4] [info] ExtensionService#_doActivateExtension vscode.search-rg {"startup":true,"activationEvent":"*"}
+[2018-11-03 14:00:09.489] [exthost4] [info] ExtensionService#loadCommonJSModule /usr/lib/code/extensions/search-rg/out/extension
+[2018-11-03 14:00:09.493] [exthost4] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2018-11-03 14:00:09.493] [exthost4] [info] ExtensionService#loadCommonJSModule /home/dosha/.vscode-oss/extensions/robertohuertasm.vscode-icons-7.28.0/out/src/
+[2018-11-03 14:00:09.624] [exthost4] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2018-11-03 14:00:09.624] [exthost4] [info] ExtensionService#loadCommonJSModule /home/dosha/.vscode-oss/extensions/vscodevim.vim-0.16.12/out/extension
+[2018-11-03 14:00:10.109] [exthost4] [info] eager extensions activated
